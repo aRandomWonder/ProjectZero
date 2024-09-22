@@ -20,3 +20,14 @@ class Player:
         self.fort = hidden_stats["fortitude"]
         self.luck = hidden_stats["luck"]
         self.dex = hidden_stats["dex"]
+
+        # Inventory
+        self.inventory = inventory
+        self.equips = equips
+        self.status = status
+        self.affil = affil
+
+        #Base stats
+
+    def print_status(self):
+        return True
