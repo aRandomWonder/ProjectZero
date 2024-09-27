@@ -27,7 +27,13 @@ class Player:
         self.status = status
         self.affil = affil
 
-        #Base stats
+        # Alternate Stats
+        self.alt_stats = {}
 
     def print_status(self):
         return True
+    
+    def fill_stats(self):
+        self.name = input("Enter your name:   ")
+        for i in range(0, 15):
+            choice = input(f"")
