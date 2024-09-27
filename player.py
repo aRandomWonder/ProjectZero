@@ -6,7 +6,9 @@ def clear_terminal():
     os.system("clear")
 
 class Player:
-    def __init__(self, name, level, prof, sub_prof, stats, hidden_stats, inventory, equips, status, affil):
+    def __init__(self, name = None, level = None, prof = None, sub_prof = None, 
+                 stats = {"vit": None, "str": None, "defe": None, "agi": None, "mana": None}, hidden_stats = {}, 
+                 inventory = {}, equips = {}, status = {}, affil = {}):
         # Basic information
         self.name = name
         self.level = level

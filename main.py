@@ -12,6 +12,8 @@ while True:
         break
     elif choice.lower == "n":
         print("Please fill out the questions below.")
+        player.fill_stats()
+        break
     else:
         print("Invalid choice. Please try again.")
 
