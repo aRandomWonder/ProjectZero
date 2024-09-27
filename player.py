@@ -1,3 +1,10 @@
+from time import sleep
+import os
+
+
+def clear_terminal():
+    os.system("clear")
+
 class Player:
     def __init__(self, name, level, prof, sub_prof, stats, hidden_stats, inventory, equips, status, affil):
         # Basic information
@@ -35,5 +42,23 @@ class Player:
     
     def fill_stats(self):
         self.name = input("Enter your name:   ")
+
+        print("Introduction to the basic 4 stats")
+        sleep(0.5)
+        print("There will be more as time goes on.")
+        sleep(0.5)
+        print("Agility - determines your speed.")
+        sleep(0.5)
+        print("Strength - determines your attack power ")
+        input("Press Enter to Move On.")
+
+        print("Now you will distribute you're points. You have 15 to freely add.")
+        print("They start at 5, half of the average human. Choose wisely.")
+        input("Press Enter to Start Adding Points")
+
+        clear_terminal()
+
         for i in range(0, 15):
-            choice = input(f"")
+            choice = input(f"You have {15-i} points left")
+            input()
+            
