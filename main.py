@@ -1,5 +1,7 @@
 from time import sleep
+from player import Player
 
+player = Player(None, None, None, None, None, None, None, None, None, None)
 
 print("Welcome to Project Zero!")
 print("In this limitless expanse, free from your real world identity, who will you be?")
