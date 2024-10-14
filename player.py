@@ -8,7 +8,7 @@ def clear_terminal():
 class Player:
     def __init__(self, name = None, level = None, prof = None, sub_prof = None, 
                  stats = {"vit": None, "str": None, "defe": None, "agi": None, "mana": None}, hidden_stats = {}, 
-                 inventory = {}, equips = {}, status = {}, affil = {}):
+                 inventory = {}, equips = {}, status = {}, affil = {}, skills = {}):
         # Basic information
         self.name = name
         self.level = level
@@ -35,6 +35,7 @@ class Player:
         self.equips = equips
         self.status = status
         self.affil = affil
+        self.skills = skills
 
         # Alternate Stats
         self.alt_stats = {}
@@ -64,3 +65,7 @@ class Player:
             choice = input(f"You have {15-i} points left")
             input()
             
+
+class Skill:
+    def __init__(self, name):
+        self.name = name
