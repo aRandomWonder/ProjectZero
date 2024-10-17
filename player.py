@@ -23,7 +23,7 @@ class Player:
         self.defe = stats["defe"]
         self.agi = stats["agi"]
         self.mana = stats["mana"]
-        self.magic = self.mana * 50
+        self.magic = self.mana * 20
         self.afi = stats["afi"]
 
         # Hidden Stats
@@ -94,6 +94,33 @@ class Player:
                 sleep(0.5)
                 print("Here are your current attributes: ")
                 input()
+                print(f"Strength: {self.str}")
+                sleep(0.1)
+                print(f"Agility: {self.agil}")
+                sleep(0.1)
+                print(f"Defense: {self.defe}")
+                sleep(0.1)
+                print(f"Vitality: {self.vit}")
+                input()
+                choice = input(f"Confirm? [y/n]").lower()
+                
+                while True:
+                    if choice == "y":
+                        print("Choice confirmed.")
+                        print("Please stand by.")
+                        input()
+                        clear_terminal()
+                    elif choice == "n":
+                        print("Resetting stats. . .")
+                        sleep(0.5)
+                        self.str = 5
+                        self.agi = 5
+                        self.vit = 5
+                        self.defe = 5
+                        clear()
+                    else:
+                        print("Invalid choice. Try again.")
+                        input()
 
             
 
