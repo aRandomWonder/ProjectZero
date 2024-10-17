@@ -6,8 +6,9 @@ def clear_terminal():
     os.system("clear")
 
 class Player:
-    def __init__(self, name = None, level = None, prof = None, sub_prof = None, 
-                 stats = {"vit": 5, "str": 5, "defe": 5, "agi": 5, "mana": 5}, hidden_stats = {"fortitude": 0, "luck": 0, "dex": 0}, 
+    def __init__(self, name = "Unknown", level = None, prof = None, sub_prof = None, 
+                 stats = {"vit": 5, "str": 5, "defe": 5, "agi": 5, "mana": 5}, 
+                 hidden_stats = {"fortitude": 0, "luck": 0, "dex": 0}, 
                  inventory = {}, equips = {}, status = {}, affil = {}, skills = {}):
         # Basic information
         self.name = name
@@ -74,19 +75,20 @@ class Player:
             choice = input(f"You have {16-i} points left.")
             choice = choice.lower()
             if choice == "agil":
-                pass
+                self.agi += 1
             elif choice == "str":
-                pass
+                self.str += 1
             elif choice == "defe":
-                pass
+                self.defe += 1
             elif choice == "vit":
-                pass
+                self.vit+=1
             else:
                 print("Invalid choice")
                 sleep(0.5)
                 print("Please try again")
                 continue
             i += 1
+            sleep(0.5)
             if i == 15: 
                 print("Selection complete.")
                 sleep(0.5)
