@@ -7,9 +7,9 @@ def clear_terminal():
 
 class Player:
     def __init__(self, name = "Unknown", level = None, prof = None, sub_prof = None, 
-                 stats = {"vit": 5, "str": 5, "defe": 5, "agi": 5, "mana": 5}, 
+                 stats = {"vit": 5, "str": 5, "defe": 5, "agi": 5, "mana": 10, "magic": 5}, 
                  hidden_stats = {"fortitude": 0, "luck": 0, "dex": 0},
-                 free_points = {"stat_points": 0, "hidden_points": 0, "skill_points": 0} 
+                 free_points = {"stat_points": 0, "hidden_points": 0, "skill_points": 0} ,
                  inventory = {}, equips = {}, status = {}, affil = {}, skills = {}):
         
         # Basic information
@@ -20,12 +20,12 @@ class Player:
 
         # Stats
         self.vit = stats["vit"]
-        self.hp = self.vit * 50
+        self.hp = vit * 50
         self.str = stats["str"]
         self.defe = stats["defe"]
         self.agi = stats["agi"]
         self.magic = stats["magic"]
-        self.mana = self.mana * 20
+        self.mana = stats["magic"] * 20
         self.afin = stats["afin"]
 
         # Hidden Stats
