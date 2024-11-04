@@ -49,4 +49,17 @@ class Player:
     def print_status(self):
         return True
     
-    def add_stats(self)
+    def add_stats(self):
+        pass
+
+    def view_stats(self):
+        pass
+
+    def view_inventory(self):
+        pass
+
+    def get_item(self):
+        pass
+
+    def use_item(self):
+        pass
