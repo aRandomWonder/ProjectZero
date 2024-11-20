@@ -37,5 +37,17 @@ wait(3)
 
 # Actual Game Start
 print("Welcome, Navigator! What's your name?")
-print("This can't be changed")
-player.name = input(">>>   ")
+
+while True:
+    print("This can't be changed")
+    player.name = input(">>>   ")
+    answer = input(f"Confirm your name is {player.name}? [y/n] >>>  ")
+    if answer.lower == "y":
+        print(f"Welcome, {player.name}")
+    elif answer.lower == "n":
+        print("Try again.")
+    else:
+        print("Invalid answer. Try again.")
+        input()
+
+print("")
