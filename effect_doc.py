@@ -47,4 +47,4 @@ def effect_translator(effect: list, stats1, stats2 = None):
     return es
 """
 
-# add the rizz effect *rize
+# add the rizz effect

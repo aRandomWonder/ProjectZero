@@ -1,7 +1,9 @@
-from time import sleep
+from time import sleep as wait
 from player import Player
 
-player = Player(None, None, None, None, None, None, None, None, None, None)
+player = Player()
+
+isAdmin= {"status": False}
 
 print("Welcome to Project Zero!")
 print("In this limitless expanse, free from your real world identity, who will you be?")
@@ -13,9 +15,27 @@ while True:
     elif choice.lower == "n":
         print("Please fill out the questions below.")
         player.fill_stats()
-        break
+        break    
+    elif choice.lower == "secret code":
+        print("👿")
+        wait(3)
+        print("I will kill you in your sleep.")
+        wait(1)
+        print("However... Do you know the code..?")
+        code = input("")
+        if code == "1234":
+            print("You are... The chosen one...")
+            wait(1000)
+            print("You found a easter eggos.")
+            isAdmin = True
     else:
         print("Invalid choice. Please try again.")
 
 print("Loading. . .")
-sleep(3)
+wait(3)
+
+
+# Actual Game Start
+print("Welcome, Navigator! What's your name?")
+print("This can't be changed")
+player.name = input(">>>   ")
