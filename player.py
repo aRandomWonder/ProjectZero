@@ -10,7 +10,7 @@ class Player:
                  stats = {"vit": 5, "str": 5, "defe": 5, "agi": 5, "mana": 10, "magic": 5}, 
                  hidden_stats = {"fortitude": 0, "luck": 0, "dex": 0},
                  free_points = {"stat_points": 0, "hidden_points": 0, "skill_points": 0} ,
-                 inventory = {}, equips = {}, status = {}, affil = {}, skills = {}):
+                 inventory = {}, equips = {}, status = {}, affil = {}, skills = {}, free = {}):
         
         # Basic information
         self.name = name
@@ -44,7 +44,8 @@ class Player:
         self.alt_stats = {}
 
         # Default Stats
-
+        self.free_stat = free["stat"]
+        self.free_skill = free["stat"]
 
     def print_status(self):
         return True
