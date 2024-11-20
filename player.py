@@ -20,7 +20,7 @@ class Player:
 
         # Stats
         self.vit = stats["vit"]
-        self.hp = vit * 50
+        self.hp = vit * 10
         self.str = stats["str"]
         self.defe = stats["defe"]
         self.agi = stats["agi"]
