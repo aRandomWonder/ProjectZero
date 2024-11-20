@@ -20,15 +20,15 @@ class Player:
 
         # Stats
         self.vit = stats["vit"]
-        self.hp = vit * 10
-        self.str = stats["str"]
+        self.hp = stats["vit"] * 10
+        self.str = stats["str"] 
         self.defe = stats["defe"]
         self.agi = stats["agi"]
         self.magic = stats["magic"]
         self.mana = stats["magic"] * 20
         self.afin = stats["afin"]
 
-        # Hidden Stats
+        # Hidden Stats 
         self.fort = hidden_stats["fortitude"]
         self.luck = hidden_stats["luck"]
         self.dex = hidden_stats["dex"]
