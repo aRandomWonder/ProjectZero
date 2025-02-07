@@ -43,15 +43,15 @@ class Player:
 
         # Even more presets
         # C stands for conversion factor
-        self.vit_hp_c = 2
-        self.mm_c = 2
+        self.vitality_to_hp_c = 2
+        self.magic_to_mana_c = 2
 
     def __str__(): # Bruh, don't print the character
         return "A sad little spirit."
 
     def update_attr(self): #
-        self.max_hp = self.vit * self.vit_hp_c
-        self.mana = self.magic * self.mm_c
+        self.max_hp = self.vit * self.vitality_to_hp_c
+        self.mana = self.magic * self.magic_to_mana_c
     
     def get_inventory(self):
         print("=========================")
@@ -127,6 +127,11 @@ class Player:
                 break
         else:
             print("No free stat points.")
+
+    def fill_stats(self):
+        self.free_attr_points = 5
+        for i in range(0, 5):
+            self.add_stats()
 
     def add_item(self, item):
         if isinstance(item, Item):

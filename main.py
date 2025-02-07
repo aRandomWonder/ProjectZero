@@ -8,13 +8,14 @@ print("In this limitless expanse, free from your real world identity, who will y
 
 while True:
     choice = input("Do you have an account [y/n] >>   ")
-    if choice.lower == "y":
+    print(choice.lower())
+    if choice.lower() == "y":
         break
-    elif choice.lower == "n":
+    elif choice.lower() == "n":
         print("Please fill out the questions below.")
         player.fill_stats()
         break    
-    elif choice.lower == "secret code":
+    elif choice.lower() == "secret code":
         print("👿")
         wait(3)
         print("I will kill you in your sleep.")
@@ -24,7 +25,7 @@ while True:
         if code == "1234":
             print("You are... The chosen one...")
             wait(1000)
-            print("You found a easter eggos.")
+            print("You found a easter egos. JK")
     else:
         print("Invalid choice. Please try again.")
 
@@ -39,9 +40,9 @@ while True:
     print("This can't be changed")
     player.name = input(">>>   ")
     answer = input(f"Confirm your name is {player.name}? [y/n] >>>  ")
-    if answer.lower == "y":
+    if answer.lower() == "y":
         print(f"Welcome, {player.name}")
-    elif answer.lower == "n":
+    elif answer.lower() == "n":
         print("Try again.")
     else:
         print("Invalid answer. Try again.")
