@@ -1,5 +1,5 @@
 class Item:
-    def __init__(self, name, description, effect, stack):
+    def __init__(self, name, description, effect, stack = False):
         self.name = name
         self.description = description
         self.effect = effect
@@ -8,9 +8,8 @@ class Item:
     def __str__(self):
         return f"{self.name}\n{self.description}\nEffects: WIP"
 
-# First time using inheritence. Boy am I nervous.
 class Equipment(Item):
-    def __init__(self, name, description, effect, location, stack):
+    def __init__(self, name, description, effect, location, stack = False):
         super().__init__(name, description, effect, stack)
         self.location = location
 

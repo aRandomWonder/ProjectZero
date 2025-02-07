@@ -3,8 +3,6 @@ from player import Player
 
 player = Player()
 
-isAdmin= {"status": False}
-
 print("Welcome to Project Zero!")
 print("In this limitless expanse, free from your real world identity, who will you be?")
 
@@ -27,7 +25,6 @@ while True:
             print("You are... The chosen one...")
             wait(1000)
             print("You found a easter eggos.")
-            isAdmin = True
     else:
         print("Invalid choice. Please try again.")
 

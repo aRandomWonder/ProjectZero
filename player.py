@@ -6,7 +6,7 @@ def clear_terminal():
     os.system("clear")
 
 from skillset import PUNCH, Skill
-from item import Item
+from inventory import Item
 from time import sleep as wait
 
 class Player:
