@@ -17,7 +17,8 @@ class Player:
         self.weapon = None
         self.skillset = [PUNCH,]
 
-        # Presets
+        # Presets - Average stats without adding anything, such as equipment, items,
+        # ornements, buffs, etc, etc
         self.max_hp = 10
         self.hp = 10
         self.mana = 10
@@ -26,6 +27,7 @@ class Player:
         self.str = 5
         self.magic = 5
         self.vit = 5
+        self.battle_effects = {}
 
         # Battle Presets
         self.bp_mhp = 10
@@ -49,7 +51,7 @@ class Player:
     def __str__(): # Bruh, don't print the character
         return "A sad little spirit."
 
-    def update_attr(self): #
+    def update_attr(self): # Update attr after you added everything.
         self.max_hp = self.vit * self.vitality_to_hp_c
         self.mana = self.magic * self.magic_to_mana_c
     
